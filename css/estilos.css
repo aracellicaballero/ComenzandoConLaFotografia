@@ -10,6 +10,12 @@ picture img{
 #menu a{
   color: white;
 }
+.secundaria1 img, .secundaria2 img {
+  box-shadow: 2px 2px #82C3A6;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+}
 /*Efectos de las imágenes*/
 .imagen_blur{
   -webkit-filter:blur(10px);
@@ -39,6 +45,21 @@ respectivamente. */
   100%{
     margin-top: 0%;
   }
+}
+/*La izquierda "paisajes" aplica un efecto de rotación de 10 grados cuando se
+coloca el puntero sobre ella, agrega color de sombra #82c3a6 y borde 2px.*/
+.secundaria1 img:hover {
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
+  transform: rotate(10deg);
+}
+/*La derecha "retratos" aplica un efecto de traslación de 5px hacia arriba y
+20px a la derecha cuando se coloca el puntero del ratón sobre ella agrega color
+de sombra #82c3a6 y borde 2px*/
+.secundaria2 img:hover {
+  margin-top: -5px;
+  margin-right: -20px;
 }
 /*Móvil*/
 @media (max-width: 900px) {
@@ -102,6 +123,10 @@ respectivamente. */
     text-align: center;
     display: flex;
     flex-flow: column;
+  }
+  .secundaria1, .secundaria2{
+    width: 100%;
+    text-align: center;
   }
 }
 /*Desktop*/
@@ -174,6 +199,10 @@ respectivamente. */
     display: -webkit-flex;
     flex-direction: column;
     -webkit-flex-direction: column;
+    text-align: center;
+  }
+  .secundaria1, .secundaria2{
+    width: 50%;
     text-align: center;
   }
 }
